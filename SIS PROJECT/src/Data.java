@@ -14,7 +14,7 @@ public class Data
 
 	public Data(String f, String l, double g, String c1, String c1g, String c2, String c2g, String c3, String c3g)
 	{
-		String firstname = f;
+		String firstName = f;
 		String lastName = l;
 		double GPA = g;
 		String class1 = c1;

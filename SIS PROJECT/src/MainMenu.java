@@ -7,7 +7,7 @@ public class MainMenu
 		public static void main(String[] args)
 			{
 				System.out.println("Please tell me what you want to do");
-		    Scanner in = new Scanner(System.in);
+			Scanner in = new Scanner(System.in);
 				System.out.println("What would you like to do?");
 				System.out.println("	1) add or delete a student");
 				System.out.println("	2) change student grades/schedule");
@@ -16,7 +16,7 @@ public class MainMenu
 				
 				if (choice1 == 1)
 				{
-					addOrDelete();
+					Submenus.addOrDelete();
 				}
 				
 				else if (choice1 == 1)
@@ -28,26 +28,21 @@ public class MainMenu
 				{
 					sortList();
 				}
-				
+					
 		}
 
 		private static void sortList()
 		{
-			// TODO Auto-generated method stub
+			// TODO Auto-generated method sub
 			
 		}
-
+		
 		private static void changeScheduleorGrades()
-		{
-			// TODO Auto-generated method stub
-			
-		}
+			{
+				// TODO Auto-generated method sub
+				
+			}
 
-
-		private static void addOrDelete()
-		{
-			// TODO Auto-generated method stub
-			
-		}
-
+	
+	
 	}
