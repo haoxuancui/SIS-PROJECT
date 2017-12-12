@@ -16,7 +16,7 @@ public class MainMenu
 				
 				if (choice1 == 1)
 				{
-					addOrDelete();
+					Submenus.addOrDelete();
 				}
 				
 				else if (choice1 == 1)
@@ -44,10 +44,5 @@ public class MainMenu
 		}
 
 
-		private static void addOrDelete()
-		{
-			// TODO Auto-generated method stub
-			
-		}
 
 	}
