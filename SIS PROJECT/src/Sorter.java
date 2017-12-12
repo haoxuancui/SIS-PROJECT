@@ -50,7 +50,8 @@ public class Sorter
 					System.out.println();
 					System.out.println();
 					System.out.println("There seems to have been a problem. Please re-try!");
-					menu();
+					int sorterType = menu();
+					chooseSorter(sorterType);
 				}
 			else if(x==1)
 				{
@@ -68,5 +69,13 @@ public class Sorter
 		public static void lastName()
 		{
 			
+		}
+		public static void gpa()
+		{
+			System.out.println("gpa");
+		}
+		public static void period()
+		{
+			System.out.println("period");
 		}
 	}
