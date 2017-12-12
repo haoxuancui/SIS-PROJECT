@@ -52,5 +52,21 @@ public class Sorter
 					System.out.println("There seems to have been a problem. Please re-try!");
 					menu();
 				}
+			else if(x==1)
+				{
+					lastName();
+				}
+			else if(x==2)
+				{
+					gpa();
+				}
+			else if(x==3)
+				{
+					period();
+				}
+		}
+		public static void lastName()
+		{
+			
 		}
 	}
