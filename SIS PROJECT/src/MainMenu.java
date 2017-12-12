@@ -7,9 +7,7 @@ public class MainMenu
 		public static void main(String[] args)
 			{
 				System.out.println("Please tell me what you want to do");
-		
-				Scanner in = new Scanner(System.in);
-				
+		    Scanner in = new Scanner(System.in);
 				System.out.println("What would you like to do?");
 				System.out.println("	1) add or delete a student");
 				System.out.println("	2) change student grades/schedule");
@@ -44,6 +42,7 @@ public class MainMenu
 			// TODO Auto-generated method stub
 			
 		}
+
 
 		private static void addOrDelete()
 		{
