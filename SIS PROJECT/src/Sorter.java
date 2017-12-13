@@ -1,4 +1,7 @@
 import java.util.*;
+
+import javax.xml.crypto.Data;
+
 import java.io.*;
 public class Sorter
 	{
@@ -68,7 +71,25 @@ public class Sorter
 		}
 		public static void lastName()
 		{
-			
+			ArrayList<Data> newStudents = new ArrayList<Data>();
+			for(int x = 0; x<roster.size(); x++)
+				{
+					int pos = 0;
+					int currentCode = 0;
+					for(int y = 0; y<roster.size(); y++)
+						{
+							String letter = roster.get(y).getLastName().substring(0,1);
+							char first = letter.charAt(0);
+							int code = (int)first;
+							if(code<currentCode)
+								{
+									currentCode = code;
+									pos = y;
+								}
+						}
+					newStudents.add(roster.get(x));
+					
+				}
 		}
 		public static void gpa()
 		{
