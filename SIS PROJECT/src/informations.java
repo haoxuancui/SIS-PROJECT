@@ -9,7 +9,7 @@ public class informations
 	{
 		static ArrayList<Data> roster = new ArrayList<Data>();
 		DecimalFormat decFor = new DecimalFormat("0.0");
-		static String reallist;
+		
 		
 		public static void fillStudentInformation() throws IOException
 			{
@@ -18,12 +18,13 @@ public class informations
 					{
 						String list =file.nextLine();
 						String [] reallist= list.split(" ");
-						
+						for(int i=0; i< reallist.length ;i++)
+							{
+								 roster.add(reallist[0],reallist[1],reallist[2],reallist[3],reallist[4],reallist[5],reallist[6],reallist[7]);
+							}
 					}
-				for(int i=0; i< reallist.length() ;i++)
-					{
-						 roster.add(new Data());
-					}
+				
+				
 			}
 		
 			

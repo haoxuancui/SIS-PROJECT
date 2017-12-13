@@ -3,26 +3,26 @@ public class Data
 {
 	String firstName;
 	String lastName;
-	double GPA;
 	String class1;
 	String class1Grade;
 	String class2;
 	String class2Grade;
 	String class3;
 	String class3Grade;
+	double GPA;
 	
 
-	public Data(String f, String l, double g, String c1, String c1g, String c2, String c2g, String c3, String c3g)
+	public Data(String f, String l,  String c1, String c1g, String c2, String c2g, String c3, String c3g,double g)
 	{
 		String firstName = f;
 		String lastName = l;
-		double GPA = g;
 		String class1 = c1;
 		String class1Grade = c1g;
 		String class2 = c2;
 		String class2Grade = c2g;
 		String class3 = c3;
 		String class3Grade = c3g;
+		double GPA = g;
 
 	}
 
