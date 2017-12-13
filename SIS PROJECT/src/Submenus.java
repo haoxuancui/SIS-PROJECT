@@ -29,15 +29,43 @@ public class Submenus
 				Scanner theInfo = new Scanner(System.in);
 				System.out.println("What is the sudent's first name?");
 				String firstName = theInfo.nextLine();
-				System.out.println("What is the sudent's last name?");
 				
-				informations.roster.add(new Data())
+				System.out.println("What is the sudent's last name?");
+				String lastName = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's GPA?");
+				double studentGPA = theInfo.nextDouble();
+				
+				System.out.println("What is the sudent's first class?");
+				String firstClass = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's first class grade?");
+				String firstClassGrade = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's second class?");
+				String secondClass = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's second class grade?");
+				String secondClassGrade = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's third class?");
+				String thirdClass = theInfo.nextLine();
+				
+				System.out.println("What is the sudent's third class grade?");
+				String thirdClassGrade = theInfo.nextLine();
+				
+				
+				informations.roster.add(new Data(firstName , lastName , studentGPA , firstClass ,firstClassGrade , secondClass ,secondClassGrade . thirdClass , thirdClassGrade));
 				
 			}
 		
 		private static void deleteStudent()
 			{
-				// TODO Auto-generated method stub
+				System.out.println("which student would you like to delete?");
+				for(int i = 0 ; i < informations.roster.size() ; i++)
+					{
+						System.out.println(informations.roster.get(i));
+					}
 				
 			}
 
