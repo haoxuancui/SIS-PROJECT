@@ -22,7 +22,7 @@ public class informations
 					}
 				for(int i=0; i< reallist.length() ;i++)
 					{
-						 roster.add(new Data(firstname, reallist, i, reallist, reallist, reallist, reallist, reallist, reallist));
+						 roster.add(new Data());
 					}
 			}
 		
