@@ -38,19 +38,12 @@ public class MainMenu
 		}
 		
 		private static void changeScheduleorGrades()
-<<<<<<< HEAD
+
 			{
 				// TODO Auto-generated method sub
 				
 			}
-=======
-		{
-			// TODO Auto-generated method stub
-			
-		}
 
-
->>>>>>> cbf8e367545ccdfbf7c5b1714798b8ffd8f7e898
 
 	
 	
