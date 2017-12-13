@@ -70,7 +70,28 @@ public class Submenus
 					}
 				String deletedStudentsName = studentName.nextLine();
 				
-				System.out.println("Are you sure you want to delete");
+				Scanner yesOrNo = new Scanner(System.in);
+				System.out.println("Are you sure you want to delete " + deletedStudentsName + " ? \n (1) yes \n (2) no");
+				int yON = yesOrNo.nextInt();
+				switch(yON)
+				{
+					case 1 : 
+						finishDeleteStudent();
+						break;
+					case 2 :
+						deleteStudent();
+						break;
+					default :
+						System.out.println("You did not enter an acceptable response, try again!");
+						deleteStudent();
+						break;
+				}
+				
+			}
+
+		private static void finishDeleteStudent()
+			{
+				// TODO Auto-generated method stub
 				
 			}
 
