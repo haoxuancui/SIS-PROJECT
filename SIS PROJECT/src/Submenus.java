@@ -61,11 +61,16 @@ public class Submenus
 		
 		private static void deleteStudent()
 			{
+				
+				Scanner studentName = new Scanner(System.in);
 				System.out.println("which student would you like to delete?");
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
 						System.out.println(informations.roster.get(i));
 					}
+				String deletedStudentsName = studentName.nextLine();
+				
+				System.out.println("Are you sure you want to delete");
 				
 			}
 
