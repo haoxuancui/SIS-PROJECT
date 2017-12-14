@@ -19,6 +19,7 @@ public class ChangeGradeorClass
 		{
 			changeGrade();
 		}
+		//ss
 	}
 	
 	public static void changeClass()
