@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.text.*;
 public class informations
 	{
-		ArrayList<Data> roster = new ArrayList<Data>();
+		static ArrayList<Data> roster = new ArrayList<Data>();
 		
 		public static void fillStudentInformation() throws IOException
 			{
@@ -15,6 +15,7 @@ public class informations
 					{
 						String list =file.nextLine();
 						String [] reallist= list.split(" ");
+						roster.add(new Data(reallist[0], reallist[1],6,reallist[2],reallist[3],reallist[4],reallist[5],reallist[6],reallist[7]));
 					}
 			}
 		

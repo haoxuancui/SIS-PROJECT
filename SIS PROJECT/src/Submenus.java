@@ -56,7 +56,7 @@ public class Submenus
 				String thirdClassGrade = theInfo.nextLine();
 				
 				
-				informations.roster.add(new Data(firstName , lastName , studentGPA , firstClass ,firstClassGrade , secondClass ,secondClassGrade . thirdClass , thirdClassGrade));
+				
 				
 			}
 		
@@ -67,8 +67,7 @@ public class Submenus
 				System.out.println("which student would you like to delete?");
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
-						System.out.println(informations.roster.get(i).firstName.lastName);
-					}
+						System.out.println(informations.roster.get(i).firstName);
 				
 				deletedStudentsName = studentName.nextLine();
 				
@@ -88,14 +87,15 @@ public class Submenus
 						deleteStudent();
 						break;
 				}
+				}
 				
 			}
 
 		private static void finishDeleteStudent()
 			{
-				for(int i = 0 , i < informations.roster.size() ; i++)
+				for(int i = 0 ;i < informations.roster.size() ; i++)
 					{
-						String temp = informations.roster.get(i).firstName.lastName;
+						String temp = informations.roster.get(i).firstName;
 						if(deletedStudentsName.equals(temp))
 							{
 								informations.roster.remove(i);
@@ -104,7 +104,7 @@ public class Submenus
 				
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
-						System.out.println(informations.roster.get(i).firstName.lastName);
+						System.out.println(informations.roster.get(i).firstName);
 					}
 				System.out.println("Done!");
 				
