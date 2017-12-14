@@ -5,8 +5,10 @@ import javafx.scene.chart.PieChart.Data;
 import java.io.*;
 public class Sorter
 	{
+		public static ArrayList<Data> roster = new ArrayList<Data>();
 		public static void main(String[] args)
 			{
+				roster.add("K", "B", 4, "a", "A+", "b", "B+", "c", "C+");
 				int sorterType = menu();
 				chooseSorter(sorterType);
 			}
