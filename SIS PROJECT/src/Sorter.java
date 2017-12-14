@@ -72,17 +72,19 @@ public class Sorter
 		public static void lastName()
 		{
 			ArrayList<String> lastNames = new ArrayList<String>();
-			for(int x=0; x<roster.size(); x++)
+			for(int x=0; x<informations.roster.size(); x++)
 				{
-					lastNames.add(roster.get(x).getLastName());
+					lastNames.add(informations.roster.get(x).getLastName());
 				}
 			Collections.sort(lastNames);
+
 			ArrayList<Student> finished = new ArrayList<Student>();
 			for(int x=0; x<roster.size(); x++)
+
 				{
-					if(roster.get(x).getLastName().equals(lastNames.get(x)))
+					if(informations.roster.get(x).getLastName().equals(lastNames.get(x)))
 						{
-							finished.add(roster.get(x));
+							finished.add(informations.roster.get(x));
 						}
 				}
 			for(int x=0; x<finished.size(); x++)
