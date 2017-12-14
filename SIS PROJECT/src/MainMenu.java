@@ -29,7 +29,7 @@ public class MainMenu
 				
 				else if (choice1 == 3)
 				{
-					sortList();
+					Sorter.sorter();
 				}
 					
 		}

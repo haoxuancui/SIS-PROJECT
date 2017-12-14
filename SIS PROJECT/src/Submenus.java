@@ -56,7 +56,11 @@ public class Submenus
 				System.out.println("What is the sudent's third class grade?");
 				String thirdClassGrade = theInfo.nextLine();
 				
-				informations.roster.add(new Data (firstName , lastName , firstClass , firstClassGrade , secondClass , secondClassGrade , thirdClass , thirdClassGrade , studentGPA));
+				informations.roster.add(new Student (firstName , lastName , firstClass , firstClassGrade , secondClass , secondClassGrade , thirdClass , thirdClassGrade , studentGPA));
+				for(int x=0; x<informations.roster.size(); x++)
+					{
+						System.out.println(informations.roster.get(x).getFirstName() + " " + informations.roster.get(x).getLastName() + " " + informations.roster.get(x).getClass1() + " " + informations.roster.get(x).getClass1Grade()+ " " + informations.roster.get(x).getClass2()+ " " + informations.roster.get(x).getClass2Grade()+ " " + informations.roster.get(x).getClass3()+ " " + informations.roster.get(x).getClass3Grade()+ " " + informations.roster.get(x).getGPA());
+					}
 				
 				
 			}

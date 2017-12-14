@@ -5,8 +5,7 @@ import javafx.scene.chart.PieChart.Data;
 import java.io.*;
 public class Sorter
 	{
-		public static ArrayList<Student> roster = new ArrayList<Student>();
-		public static void main(String[] args)
+		public static void sorter()
 			{
 				int sorterType = menu();
 				chooseSorter(sorterType);
@@ -79,38 +78,46 @@ public class Sorter
 			Collections.sort(lastNames);
 
 			ArrayList<Student> finished = new ArrayList<Student>();
-			for(int x=0; x<roster.size(); x++)
+			for(int j=0; j<informations.roster.size(); j++)
+				{
+			for(int x=0; x<informations.roster.size(); x++)
 
 				{
-					if(informations.roster.get(x).getLastName().equals(lastNames.get(x)))
+					if(informations.roster.get(x).getLastName().equals(lastNames.get(j)))
 						{
 							finished.add(informations.roster.get(x));
 						}
 				}
+				}
 			for(int x=0; x<finished.size(); x++)
 				{
-					System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName());
+					System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName() + " " + finished.get(x).getClass1()+ " " + finished.get(x).getClass1Grade()+ " " + finished.get(x).getClass2()+ " " + finished.get(x).getClass2Grade()+ " " + finished.get(x).getClass3()+ " " + finished.get(x).getClass3Grade()+ " " + finished.get(x).getGPA());
 				}
 		}
 		public static void gpa()
 		{
 			ArrayList<Double> lastNames = new ArrayList<Double>();
-			for(int x=0; x<roster.size(); x++)
+			for(int x=0; x<informations.roster.size(); x++)
 				{
-					lastNames.add(roster.get(x).getGPA());
+					lastNames.add(informations.roster.get(x).getGPA());
 				}
 			Collections.sort(lastNames);
 			ArrayList<Student> finished = new ArrayList<Student>();
-			for(int x=0; x<roster.size(); x++)
+			for(int j=0; j<informations.roster.size(); j++)
 				{
-					if(roster.get(x).getGPA() == (lastNames.get(x)))
+			for(int x=0; x<informations.roster.size(); x++)
+				{
+					if(informations.roster.get(x).getGPA() == (lastNames.get(j)))
 						{
-							finished.add(roster.get(x));
+							finished.add(informations.roster.get(x));
+							informations.roster.remove(x);
+							j++;
 						}
+				}
 				}
 			for(int x=0; x<finished.size(); x++)
 				{
-					System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName());
+					System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName() + " " + finished.get(x).getClass1()+ " " + finished.get(x).getClass1Grade()+ " " + finished.get(x).getClass2()+ " " + finished.get(x).getClass2Grade()+ " " + finished.get(x).getClass3()+ " " + finished.get(x).getClass3Grade()+ " " + finished.get(x).getGPA());
 				}
 		}
 		public static void period()
@@ -135,64 +142,73 @@ public class Sorter
 		public static void period1()
 			{
 				ArrayList<String> lastNames = new ArrayList<String>();
-				for(int x=0; x<roster.size(); x++)
+				for(int x=0; x<informations.roster.size(); x++)
 					{
-						lastNames.add(roster.get(x).getClass1());
+						lastNames.add(informations.roster.get(x).getClass1());
 					}
 				Collections.sort(lastNames);
 				ArrayList<Student> finished = new ArrayList<Student>();
-				for(int x=0; x<roster.size(); x++)
+				for(int j=0; j<informations.roster.size(); j++)
 					{
-						if(roster.get(x).getClass1() == (lastNames.get(x)))
+				for(int x=0; x<informations.roster.size(); x++)
+					{
+						if(informations.roster.get(x).getClass1() == (lastNames.get(j)))
 							{
-								finished.add(roster.get(x));
+								finished.add(informations.roster.get(x));
 							}
+					}
 					}
 				for(int x=0; x<finished.size(); x++)
 					{
-						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName());
+						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName() + " " + finished.get(x).getClass1()+ " " + finished.get(x).getClass1Grade()+ " " + finished.get(x).getClass2()+ " " + finished.get(x).getClass2Grade()+ " " + finished.get(x).getClass3()+ " " + finished.get(x).getClass3Grade()+ " " + finished.get(x).getGPA());
 					}
 			}
 		public static void period2()
 			{
 				ArrayList<String> lastNames = new ArrayList<String>();
-				for(int x=0; x<roster.size(); x++)
+				for(int x=0; x<informations.roster.size(); x++)
 					{
-						lastNames.add(roster.get(x).getClass2());
+						lastNames.add(informations.roster.get(x).getClass2());
 					}
 				Collections.sort(lastNames);
 				ArrayList<Student> finished = new ArrayList<Student>();
-				for(int x=0; x<roster.size(); x++)
+				for(int j=0; j<informations.roster.size(); j++)
 					{
-						if(roster.get(x).getClass2() == (lastNames.get(x)))
+				for(int x=0; x<informations.roster.size(); x++)
+					{
+						if(informations.roster.get(x).getClass2() == (lastNames.get(j)))
 							{
-								finished.add(roster.get(x));
+								finished.add(informations.roster.get(x));
 							}
+					}
 					}
 				for(int x=0; x<finished.size(); x++)
 					{
-						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName());
+						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName() + " " + finished.get(x).getClass1()+ " " + finished.get(x).getClass1Grade()+ " " + finished.get(x).getClass2()+ " " + finished.get(x).getClass2Grade()+ " " + finished.get(x).getClass3()+ " " + finished.get(x).getClass3Grade()+ " " + finished.get(x).getGPA());
 					}
 			}
 		public static void period3()
 			{
 				ArrayList<String> lastNames = new ArrayList<String>();
-				for(int x=0; x<roster.size(); x++)
+				for(int x=0; x<informations.roster.size(); x++)
 					{
-						lastNames.add(roster.get(x).getClass3());
+						lastNames.add(informations.roster.get(x).getClass3());
 					}
 				Collections.sort(lastNames);
 				ArrayList<Student> finished = new ArrayList<Student>();
-				for(int x=0; x<roster.size(); x++)
+				for(int j=0; j<informations.roster.size(); j++)
 					{
-						if(roster.get(x).getClass3() == (lastNames.get(x)))
+				for(int x=0; x<informations.roster.size(); x++)
+					{
+						if(informations.roster.get(x).getClass3() == (lastNames.get(j)))
 							{
-								finished.add(roster.get(x));
+								finished.add(informations.roster.get(x));
 							}
 					}
-				for(int x=0; x<finished.size(); x++)
+					}
+				for(int x=0; x<informations.roster.size(); x++)
 					{
-						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName());
+						System.out.println(finished.get(x).getFirstName() + " " + finished.get(x).getLastName() + " " + finished.get(x).getClass1()+ " " + finished.get(x).getClass1Grade()+ " " + finished.get(x).getClass2()+ " " + finished.get(x).getClass2Grade()+ " " + finished.get(x).getClass3()+ " " + finished.get(x).getClass3Grade()+ " " + finished.get(x).getGPA());
 					}
 			}
 	}
