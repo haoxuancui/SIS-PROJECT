@@ -8,8 +8,9 @@ import java.text.*;
 public class informations
 	{
 		static ArrayList<Data> roster = new ArrayList<Data>();
+
 		DecimalFormat decFor = new DecimalFormat("0.0");
-		
+
 		
 		public static void fillStudentInformation() throws IOException
 			{
@@ -21,6 +22,7 @@ public class informations
 						roster.add(new Data(reallist[0],reallist[1],reallist[2],reallist[3],reallist[4],reallist[5],reallist[6],reallist[7],6));
 							
 					} 
+
 				
 				
 			}
