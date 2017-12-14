@@ -1,4 +1,4 @@
-public class Data
+public class Student
 {
 	String firstName;
 	String lastName;
@@ -11,7 +11,7 @@ public class Data
 	double GPA;
 	
 
-	public Data(String f, String l,  String c1, String c1g, String c2, String c2g, String c3, String c3g,double g)
+	public Student(String f, String l,  String c1, String c1g, String c2, String c2g, String c3, String c3g,double g)
 	{
 		firstName = f;
 		lastName = l;
