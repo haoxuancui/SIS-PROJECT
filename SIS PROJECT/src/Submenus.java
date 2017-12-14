@@ -34,8 +34,9 @@ public class Submenus
 				System.out.println("What is the sudent's last name?");
 				String lastName = theInfo.nextLine();
 				
+				Scanner theGPA = new Scanner(System.in);
 				System.out.println("What is the sudent's GPA?");
-				double studentGPA = theInfo.nextDouble();
+				double studentGPA = theGPA.nextDouble();
 				
 				System.out.println("What is the sudent's first class?");
 				String firstClass = theInfo.nextLine();
@@ -67,9 +68,10 @@ public class Submenus
 				System.out.println("which student would you like to delete?");
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
-						System.out.println(informations.roster.get(i).firstName);
-					
+						System.out.println(informations.roster.get(i).getFirstName());
 					}
+				
+
 				deletedStudentsName = studentName.nextLine();
 				
 				Scanner yesOrNo = new Scanner(System.in);
@@ -88,9 +90,9 @@ public class Submenus
 						deleteStudent();
 						break;
 				}
-			}
+				}
 				
-	
+			
 
 		private static void finishDeleteStudent()
 			{
