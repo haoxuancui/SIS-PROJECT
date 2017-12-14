@@ -55,7 +55,7 @@ public class Submenus
 				String thirdClassGrade = theInfo.nextLine();
 				
 				
-				informations.roster.add(new Data(firstName , lastName , studentGPA , firstClass ,firstClassGrade , secondClass ,secondClassGrade . thirdClass , thirdClassGrade));
+				
 				
 			}
 		
