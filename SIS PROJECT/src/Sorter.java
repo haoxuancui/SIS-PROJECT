@@ -9,7 +9,6 @@ public class Sorter
 			{
 				int sorterType = menu();
 				chooseSorter(sorterType);
-				
 			}
 		public static int menu()
 		{
@@ -17,9 +16,9 @@ public class Sorter
 			int gpa =2;
 			int period =3;
 			System.out.println("How do you want to sort?");
-			System.out.println("1) Sort by last name");
-			System.out.println("2) Sort by GPA");
-			System.out.println("3) Sort by period");
+			System.out.println("	1) Sort by last name");
+			System.out.println("	2) Sort by GPA");
+			System.out.println("	3) Sort by period");
 			Scanner reply = new Scanner(System.in);
 			try
 				{
