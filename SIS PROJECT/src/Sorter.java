@@ -1,6 +1,6 @@
 import java.util.*;
 
-import javax.xml.crypto.Data;
+import javafx.scene.chart.PieChart.Data;
 
 import java.io.*;
 public class Sorter
@@ -9,7 +9,6 @@ public class Sorter
 			{
 				int sorterType = menu();
 				chooseSorter(sorterType);
-				
 			}
 		public static int menu()
 		{
@@ -17,9 +16,9 @@ public class Sorter
 			int gpa =2;
 			int period =3;
 			System.out.println("How do you want to sort?");
-			System.out.println("1) Sort by last name");
-			System.out.println("2) Sort by GPA");
-			System.out.println("3) Sort by period");
+			System.out.println("	1) Sort by last name");
+			System.out.println("	2) Sort by GPA");
+			System.out.println("	3) Sort by period");
 			Scanner reply = new Scanner(System.in);
 			try
 				{
@@ -71,24 +70,19 @@ public class Sorter
 		}
 		public static void lastName()
 		{
-			ArrayList<Data> newStudents = new ArrayList<Data>();
-			for(int x = 0; x<roster.size(); x++)
+			ArrayList<String> lastNames = new ArrayList<String>();
+			for(int x=0; x<informations.roster.size(); x++)
 				{
-					int pos = 0;
-					int currentCode = 0;
-					for(int y = 0; y<roster.size(); y++)
+					lastNames.add(informations.roster.get(x).getLastName());
+				}
+			Collections.sort(lastNames);
+			ArrayList<Data> finished = new ArrayList<Data>();
+			for(int x=0; x<informations.roster.size(); x++)
+				{
+					if(informations.roster.get(x).getLastName().equals(lastNames.get(x)))
 						{
-							String letter = roster.get(y).getLastName().substring(0,1);
-							char first = letter.charAt(0);
-							int code = (int)first;
-							if(code<currentCode)
-								{
-									currentCode = code;
-									pos = y;
-								}
+							finished.add(informations.roster.get(x));
 						}
-					newStudents.add(roster.get(x));
-					
 				}
 		}
 		public static void gpa()

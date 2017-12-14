@@ -22,12 +22,12 @@ public class MainMenu
 					Submenus.addOrDelete();
 				}
 				
-				else if (choice1 == 1)
+				else if (choice1 == 2)
 				{
 					changeScheduleorGrades();
 				}
 				
-				else if (choice1 == 1)
+				else if (choice1 == 3)
 				{
 					sortList();
 				}
@@ -37,7 +37,7 @@ public class MainMenu
 		private static void sortList()
 		{
 			// TODO Auto-generated method sub
-			
+			//ssd
 		}
 		
 		private static void changeScheduleorGrades()
