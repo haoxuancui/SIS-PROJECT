@@ -55,7 +55,7 @@ public class Submenus
 				System.out.println("What is the sudent's third class grade?");
 				String thirdClassGrade = theInfo.nextLine();
 				
-				
+				informations.roster.add(new Data (firstName , lastName , firstClass , firstClassGrade , secondClass , secondClassGrade , thirdClass , thirdClassGrade , studentGPA));
 				
 				
 			}
@@ -68,7 +68,8 @@ public class Submenus
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
 						System.out.println(informations.roster.get(i).firstName);
-				
+					
+					}
 				deletedStudentsName = studentName.nextLine();
 				
 				Scanner yesOrNo = new Scanner(System.in);
@@ -87,9 +88,9 @@ public class Submenus
 						deleteStudent();
 						break;
 				}
-				}
-				
 			}
+				
+	
 
 		private static void finishDeleteStudent()
 			{
