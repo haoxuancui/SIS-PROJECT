@@ -1,11 +1,14 @@
+import java.io.IOException;
 import java.util.*;
 import java.util.ArrayList;
 
 public class MainMenu
 	{
 
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 			{
+				informations.fillStudentInformation();
+				
 				System.out.println("Please tell me what you want to do");
 			Scanner in = new Scanner(System.in);
 				System.out.println("What would you like to do?");

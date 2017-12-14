@@ -14,15 +14,15 @@ public class Data
 
 	public Data(String f, String l,  String c1, String c1g, String c2, String c2g, String c3, String c3g,double g)
 	{
-		String firstName = f;
-		String lastName = l;
-		String class1 = c1;
-		String class1Grade = c1g;
-		String class2 = c2;
-		String class2Grade = c2g;
-		String class3 = c3;
-		String class3Grade = c3g;
-		double GPA = g;
+		 firstName = f;
+		 lastName = l;
+		 class1 = c1;
+		 class1Grade = c1g;
+		 class2 = c2;
+		 class2Grade = c2g;
+		 class3 = c3;
+		 class3Grade = c3g;
+		 GPA = g;
 
 	}
 
