@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Submenus
 	{
+		public static String deletedStudentsName;
 		
 		public static void addOrDelete()
 			{
@@ -66,9 +67,9 @@ public class Submenus
 				System.out.println("which student would you like to delete?");
 				for(int i = 0 ; i < informations.roster.size() ; i++)
 					{
-						System.out.println(informations.roster.get(i));
-					}
-				String deletedStudentsName = studentName.nextLine();
+						System.out.println(informations.roster.get(i).firstName);
+				
+				deletedStudentsName = studentName.nextLine();
 				
 				Scanner yesOrNo = new Scanner(System.in);
 				System.out.println("Are you sure you want to delete " + deletedStudentsName + " ? \n (1) yes \n (2) no");
@@ -86,12 +87,26 @@ public class Submenus
 						deleteStudent();
 						break;
 				}
+				}
 				
 			}
 
 		private static void finishDeleteStudent()
 			{
-				// TODO Auto-generated method stub
+				for(int i = 0 ;i < informations.roster.size() ; i++)
+					{
+						String temp = informations.roster.get(i).firstName;
+						if(deletedStudentsName.equals(temp))
+							{
+								informations.roster.remove(i);
+							}
+					}
+				
+				for(int i = 0 ; i < informations.roster.size() ; i++)
+					{
+						System.out.println(informations.roster.get(i).firstName);
+					}
+				System.out.println("Done!");
 				
 			}
 
