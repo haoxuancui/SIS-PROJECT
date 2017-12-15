@@ -24,7 +24,7 @@ public class MainMenu
 				
 				else if (choice1 == 2)
 				{
-					ChangeGradeorClass();
+					ChangeGradeorClass.ChangeClassOrGrade();
 				}
 				
 				else if (choice1 == 3)
