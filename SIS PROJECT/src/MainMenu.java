@@ -32,7 +32,7 @@ public class MainMenu
 					Sorter.sorter();
 				}
 					
-				String fpg = informations.roster.class1Grade;
+				String fpg = informations.roster.get(0).getClass1Grade();
 				String spg = informations.roster.class2Grade;
 				String tpg = informations.roster.class3Grade;
 				
