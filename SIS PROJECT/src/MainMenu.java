@@ -24,7 +24,7 @@ public class MainMenu
 				
 				else if (choice1 == 2)
 				{
-					changeScheduleorGrades();
+					ChangeGradeorClass();
 				}
 				
 				else if (choice1 == 3)
@@ -34,20 +34,7 @@ public class MainMenu
 					
 		}
 
-		private static void sortList()
-		{
-			// TODO Auto-generated method sub
-			//ssd
-		}
 		
-		private static void changeScheduleorGrades()
-
-			{
-				// TODO Auto-generated method sub
-				
-			}
-
-
 	
 	
 	}

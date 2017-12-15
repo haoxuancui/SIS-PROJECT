@@ -28,7 +28,7 @@ public class ChangeGradeorClass
 		System.out.println("Which student?");
 		for(int i = 0 ; i < informations.roster.size() ; i++)
 		{
-			System.out.println("1) " + informations.roster.get(i).firstName);
+			System.out.println(informations.roster.get(i).firstName);
 		}
 		int whichStudent = in.nextInt();
 		
