@@ -110,8 +110,7 @@ public class Sorter
 					if(informations.roster.get(x).getGPA() == (lastNames.get(j)))
 						{
 							finished.add(informations.roster.get(x));
-							informations.roster.remove(x);
-							j++;
+							informations.roster.get(x).setGPA(999.9);
 						}
 				}
 				}

@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class MainMenu
 	{
-
+		static double fpg=0.0;
+		static double spg=0.0;
+		static double tpg=0.0;
+		static double gpa=0.0;
+				
 		public static void main(String[] args) throws IOException
 			{
 				informations.fillStudentInformation();
-				
+				setGPA();
 				System.out.println("Please tell me what you want to do");
 			Scanner in = new Scanner(System.in);
 				System.out.println("What would you like to do?");
@@ -31,99 +35,104 @@ public class MainMenu
 				{
 					Sorter.sorter();
 				}
-					
-				String fpg = informations.roster.get(0).getClass1Grade();
-				String spg = informations.roster.class2Grade;
-				String tpg = informations.roster.class3Grade;
+			}
+			public static void setGPA()
+			{
+				for(int x=0; x<informations.roster.size(); x++)
+					{
+				String firstperiodgrade = informations.roster.get(x).getClass1Grade();
+				String secondperiodgrade = informations.roster.get(x).getClass2Grade();
+				String thirdperiodgrade = informations.roster.get(x).getClass3Grade();
 				
-				switch(fpg)
+					
+				switch(firstperiodgrade)
 					{
 						case "A+":
 								{
-								gpa += 4.0;
+								fpg= 4.0;
 								break;
 								}
 						case "A":
 								{
-								gpa += 4.0;
+									fpg= 4.0;
 								break;
 								}
 						case "A-":
 								{
-								gpa += 3.7;
+									fpg= 3.7;
 								break;
 								}
 						case "B+":
 								{
-								gpa += 3.3;
+									fpg= 3.3;
 								break;
 								}
 						case "B":
 								{
-								gpa += 3.0;
+									fpg= 3.0;
 								break;
 								}
 						case "B-":
 								{
-								gpa += 2.7;
+									fpg= 2.7;
 								break;
 								}
 						case "C+":
 								{
-								gpa += 2.3;
+									fpg= 2.3;
 								break;
 								}
 						case "C":
 								{
-								gpa += 2.0;
+								fpg= 2.0;
 								break;
 								}
 						case "C-":
 								{
-								gpa += 1.7;
+									fpg= 1.7;
 								break;
 								}
 						case "D+":
 								{
-								gpa += 1.3;
+									fpg= 1.3;
 								break;
 								}
 						case "D":
 								{
-								gpa += 1.0;
+								fpg= 1.0;
 								break;
 								}
 					}
-				switch(spg)
+				switch(secondperiodgrade)
 				{
 					case "A+":
 							{
-							gpa += 4.0;
+							spg= 4.0;
 							break;
 							}
 					case "A":
 							{
-							gpa += 4.0;
+								spg= 4.0;
 							break;
 							}
 					case "A-":
 							{
-							gpa += 3.7;
+								spg= 3.7;
 							break;
 							}
 					case "B+":
 							{
-							gpa += 3.3;
+								spg= 3.3;
 							break;
 							}
 					case "B":
 							{
-							gpa += 3.0;
+								spg= 3.0;
 							break;
 							}
 					case "B-":
 							{
-							gpa += 2.7;
+								spg= 2.7;
 							break;
 							}
 					case "C+":
@@ -133,82 +142,88 @@ public class MainMenu
 							}
 					case "C":
 							{
-							gpa += 2.0;
+								spg= 2.0;
 							break;
 							}
 					case "C-":
 							{
-							gpa += 1.7;
+								spg= 1.7;
 							break;
 							}
 					case "D+":
 							{
-							gpa += 1.3;
+								spg= 1.3;
 							break;
 							}
 					case "D":
 							{
-							gpa += 1.0;
+							spg= 1.0;
 							break;
 							}
 				}
-				switch(tpg)
+				switch(thirdperiodgrade)
 				{
 					case "A+":
 							{
-							gpa += 4.0;
+							tpg= 4.0;
 							break;
 							}
 					case "A":
 							{
-							gpa += 4.0;
+								tpg= 4.0;
 							break;
 							}
 					case "A-":
 							{
-							gpa += 3.7;
+								tpg= 3.7;
 							break;
 							}
 					case "B+":
 							{
-							gpa += 3.3;
+								tpg= 3.3;
 							break;
 							}
 					case "B":
 							{
-							gpa += 3.0;
+								tpg= 3.0;
 							break;
 							}
 					case "B-":
 							{
-							gpa += 2.7;
+								tpg= 2.7;
 							break;
 							}
 					case "C+":
 							{
-							gpa += 2.3;
+								tpg= 2.3;
 							break;
 							}
 					case "C":
 							{
-							gpa += 2.0;
+								tpg= 2.0;
 							break;
 							}
 					case "C-":
 							{
-							gpa += 1.7;
+								tpg= 1.7;
 							break;
 							}
 					case "D+":
 							{
-							gpa += 1.3;
+								tpg= 1.3;
 							break;
 							}
 					case "D":
 							{
-							gpa += 1.0;
+								tpg= 1.0;
 							break;
 							}
+				}
+				gpa=(fpg+spg+tpg)/3;
+				String gpa1=Double.toString(gpa);
+				String gpa2=gpa1.substring(0, 3);
+				double gpaFinal = Double.parseDouble(gpa2);
+				informations.roster.get(x).setGPA(gpaFinal);
 				}
 		}
 
